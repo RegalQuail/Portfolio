@@ -4,47 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <link rel="stylesheet" href="myStyle.css">
-
+    <title>Jonah's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
 
-    <div class="box"></div>
-    
-    <header>
-        <h1>Welcome to my very own Portfolio</h1>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>This is my very own website. I hope you enjoy it.</p>
-        </section>
-        
-        <section>
-            <h2>Latest News</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Quisquam, quidem, dolorem, ipsam, quas, dolores, eos, nesciunt, 
-                voluptatem, quam, aspernatur, doloribus, aliquam!</p>
-        </section>
-        
-        <section>
-            <h2>Links</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Quisquam, quidem, dolorem, ipsam, quas, dolores, eos, nesciunt, 
-                voluptatem, quam, aspernatur, doloribus, aliquam!</p>
-        </section>
-    </main>
+    <section class="tab">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <div class="tab-container">
 
+            <ul class="tab-nav">
+                <li class="active">Home</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <div class="tab-body active">
+
+                <div class="tab-col-left">
+                    <img src="./img/millenium-falcon.gif" alt="my pfp" width="400">
+                </div>
+
+                <div class="tab-col-right">
+
+                    <h2>Velkommen på min Portfolie</h2>
+                    <p>
+                        Bonjour ! Jeg hedder Jonah, jeg går i 3.y i Rysensteen
+                        Gymnasium, og jeg elsker Star Wars. Dette webside er en <strong>Portfolie</strong>, 
+                        vores første Informatik-projekt af året. I kan navigere min projekt
+                        ved brug af min custom navigation bar på toppen, eller klik på 
+                        knappen nedenfor som vil tage jer til min Github Repository.
+                    </p>
+                    
+                    <div class="test">
+                        <p class="mark">Info</p>
+                        <p class="info">
+                            <a href="https://github.com/RegalQuail/Portfolio" class="link">Github</a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tab-body">
+
+                <div class="tab-col-left">
+                    <img src="./img/at-at.gif" alt="SW gif" width="400">
+                </div>
+
+                <div class="tab-col-right">
+
+                    <h2>Skeletet</h2>
+                    <p>
+                        Det vigtigste kode er <strong>&lt;meta charset="UTF-8"&gt;</strong>. 
+                        Den lader mig skrive ord med 'æ', 'ø' og 'å'. Hele min kode er kasset 
+                        ind i <strong>&lt;section class="tab"&gt;</strong>, med 4 hoved dele 
+                        indlejret i hver deres <strong>&lt;div class="tab-body"&gt;</strong>. Den første 
+                        har "active" til sidste, fordi det er den, som er active først når man ankommer 
+                        på siden. Hver hoved dele er delt i 2 med "tab-col-left" og "tab-col-right", 
+                        hvor den venstre side har billeder, som indsættes således: 
+                        <strong>&lt;img src="navn" alt="tekst"&gt;</strong>, mens højre siden har tekst, 
+                        og en knap under den. I kan læse mere om HTML på W3Schools med linket nedenunder, 
+                        eller gå mere i dybden i min kode på hovedsiden. 
+                    </p>
+
+                    <a href="https://www.w3schools.com/html/default.asp" class="btn">W3Schools HTML</a>
+
+                </div>
+
+            </div>
+
+            <div class="tab-body">
+
+                <div class="tab-col-left">
+                    <img src="./img/falcon.gif" alt="SW gif" width="400">
+                </div>
+
+                <div class="tab-col-right">
+
+                    <h2>Udsigten</h2>
+                    <p>
+                        Det er mest med CSS at vi lader "the magic happen". Den er skrevet på dens
+                        egen fil med navn: navn.css. Den linker man til HTML filen med
+                        &lt;link rel="stylesheet" href="navn.css"&gt; mellem &lt;head&gt; elementet.
+                        Den er også delt i små grupper, for eksempel for min "navigation bar" på toppen, 
+                        eller mine knapper ved bunden af min side. Det der springer mest frem er organisationen, 
+                        og hvordan det går mere og mere i dybden for hver element af siden. I kan gå tilbage til 
+                        hovedsiden for at tage en "closer look" i min kode, eller klik nedenunder til at lære 
+                        mere om CSS på W3Schools.
+                    </p>
+                    <a href="https://www.w3schools.com/css/default.asp" class="btn">W3Schools CSS</a>
+
+                </div>
+
+            </div>
+
+            <div class="tab-body">
+
+                <div class="tab-col-left">
+                    <img src="./img/x_wing.gif" alt="SW gif" width="400">
+                </div>
+
+                <div class="tab-col-right">
+
+                    <h2>Musklerne</h2>
+                    <p>
+                        JavaScript kan være ret skræmmende når man starter med at se alt det den kan
+                        gøre, men her er koden ret simpelt når man forstår den. JavaScript kan også
+                        skrives på dens egen fil med navn: navn.js, som linkes til HTML filen med
+                        en "script" tag således: &lt;script src="navn.js"&gt;&lt;/script&gt;.
+                        Det er koden der gøre at i kan skifte fra en side til en anden, ved at 
+                        klikke på min "navigation bar". I kan lære mere om JavaScript på W3Schools 
+                        nedenunder.
+                    </p>
+                    <a href="https://www.w3schools.com/js/default.asp" class="btn">W3Schools JS</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
 </body>
 </html>
