@@ -138,9 +138,11 @@ body { font-family: "Poppins", sans-serif; }
     width: max-content;
     margin-top: 0;
     margin-bottom: 0;
+    display: inline-block;
 }
 
 .tab-body .tab-col-right .test .link {
     text-decoration: none;
     color: #fff;
+    display: inline-block;
 }
