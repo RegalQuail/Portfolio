@@ -89,4 +89,14 @@ Den process bliver gentaget flere gange, som gør op hele hjemmesiden.
 
 ### CSS
 
+Jeg bruger en color-pallet der har en lille moderne udsyn, med shades af grå og blå, som passer meget godt med billederne jeg har valgt at bruge.
+
+For min navigation-bar på toppen, den har jeg stylet til at være en store boks med de forskellig `<li>` elementer. Linjen under hver knap har jeg gjort ved at bruge `border-bottom`. Så bruger jeg `li.active` til at style den knap som er active, altså den man har trykket på; de skifter farve og bliver større ved bruge af `transform: scale()`.
+
+Jeg har brugt `@keyframes` for at lave min egen animation. Her er det en animation for når man skifter fra en side til en anden. Siden flytter ind i skærmen fra højre med `position: translateX(-20px)`, som gøre at elementet bevæger sig på x-aksen af 20 pixels; også dukker den op ved brug af `opacity`, hvor den går fra usynlig til synlig.
+
+Så for min knap på første siden, "Home", er det lidt det samme princip som animationen fra side til side. Jeg flytter og gøre usynlig det ene dele af boksen, mens den anden gøres synlig, ved brug af `:hover` selectoren. Det er en speciel CSS selector man kan brug for når man vil et element til at reagere til noget når musen bevæger sig på elementet.
+
 ### JavaScript
+
+JavaScript er hvor "the magic happens". Det er koden der gør det muligt til at flyt fra en side til den anden i min Portfolie. Det den gør er, at den checker for hvad for en `<li>`-element holder det `'active'` attribute. Så er der en funktion der lytter for en "click" på `<li>`-elementerne, altså hvornår man klikker på min navigation-bar, og så giver det `'active'` attribute til den der blev klikket på.
