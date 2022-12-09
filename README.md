@@ -100,3 +100,9 @@ Så for min knap på første siden, "Home", er det lidt det samme princip som an
 ### JavaScript
 
 JavaScript er hvor "the magic happens". Det er koden der gør det muligt til at flyt fra en side til den anden i min Portfolie. Det den gør er, at den checker for hvad for en `<li>`-element holder det `'active'` attribute. Så er der en funktion der lytter for en "click" på `<li>`-elementerne, altså hvornår man klikker på min navigation-bar, og så giver det `'active'` attribute til den der blev klikket på.
+
+## AstroPi Forløb
+
+### Vores Projektbeskrivelse
+
+Our idea for the Astro Pi 2022 experiment is to measure the average velocity of an astronaut in the ISS. We are curious to see how fast the astronauts and objects averagely moves from one spot to another in the station.
