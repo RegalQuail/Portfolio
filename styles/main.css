@@ -1,0 +1,45 @@
+:root {
+    --bg-color: rgb(25, 25, 25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: "Rubik", sans-serif;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.col-left,
+.col-right {
+    flex: 1;
+}
+
+.col-right h2 {
+    font-size: 40px;
+    color: #5764ac;
+    letter-spacing: 1px;
+}
+
+.col-right p {
+    line-height: 1.8;
+    margin: 20px 0 60px;
+    color: rgb(240, 240, 240);
+}
+
+.col-right .btn {
+    padding: 15px 45px;
+    background-color: #5764ac;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.col-right .btn:hover {
+    background-color: #4e5aa0;
+}

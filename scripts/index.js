@@ -17,6 +17,7 @@ tabNavList.forEach((item, index, listArray) => {
             tabBody[1].classList.remove('active');
             tabBody[2].classList.remove('active');
             tabBody[3].classList.remove('active');
+            tabBody[4].classList.remove('active');
         }
 
         if (listArray[1].classList.contains('active')) {
@@ -24,6 +25,7 @@ tabNavList.forEach((item, index, listArray) => {
             tabBody[0].classList.remove('active');
             tabBody[2].classList.remove('active');
             tabBody[3].classList.remove('active');
+            tabBody[4].classList.remove('active');
         }
 
         if (listArray[2].classList.contains('active')) {
@@ -31,6 +33,7 @@ tabNavList.forEach((item, index, listArray) => {
             tabBody[0].classList.remove('active');
             tabBody[1].classList.remove('active');
             tabBody[3].classList.remove('active');
+            tabBody[4].classList.remove('active');
         }
 
         if (listArray[3].classList.contains('active')) {
@@ -38,6 +41,15 @@ tabNavList.forEach((item, index, listArray) => {
             tabBody[0].classList.remove('active');
             tabBody[1].classList.remove('active');
             tabBody[2].classList.remove('active');
+            tabBody[4].classList.remove('active');
+        }
+
+        if (listArray[4].classList.contains('active')) {
+            tabBody[4].classList.add('active');
+            tabBody[0].classList.remove('active');
+            tabBody[1].classList.remove('active');
+            tabBody[2].classList.remove('active');
+            tabBody[3].classList.remove('active');
         }
 
     })
