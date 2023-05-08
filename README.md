@@ -106,3 +106,21 @@ JavaScript er hvor "the magic happens". Det er koden der gør det muligt til at 
 ### Vores Projektbeskrivelse
 
 Our idea for the Astro Pi 2022 experiment is to measure the average velocity of an astronaut in the ISS. We are curious to see how fast the astronauts and objects averagely moves from one spot to another in the station.
+
+## Database Forløb
+
+I min "Quiz" folder, findes der fire filer:
+
+```text
+index.html
+style.css
+script.js
+db.csv
+```
+
+`index.html`-filen indeholder strukturen til spillet. I `<head>` forbinder man både JS filen og CSS filen, og importerer både PapaParse-biblioteket, for at kunne læse csv-filen, og "fontawesome", som indeholder fede logoer man kan bruge.
+
+Så går man ned til `<body>` delen. `<h1>` indeholder en "data-value", som jeg bruger, for at min program kan huske hvad der står i titlen, nemlig fordi ved at svæve over den, så sker der et "special effect". Så er der et `<div>`, som har et klasse for at kunne style den i CSS, og en id for at have adgang til den i JS-filen. Til sidst har den en "onclick" funktion, som kører funktionen `question()` lig så snart man trykker på den. Funktionen sætter "start" til at være "true", som bruges senere i koden.
+```document.getElementById('score').innerHTML = `Your score: ${score}/${data.length}`;```
+Den del kigger på elementet i HTML som har "score" som id, og sætter dens værdi til en string: "Your score" + variablen score + "/" + længden af dataen i csv-filen. Den der
+```document.getElementById('score').innerHTML``` er vigtigt i JS-filen, da det er den man bruger for at kunne få adgang til HTML-elementer, og kunne ændre på dem.

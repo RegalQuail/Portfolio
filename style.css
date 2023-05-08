@@ -86,6 +86,8 @@ body { font-family: "Poppins", sans-serif; }
     color: #fff;
     text-decoration: none;
     letter-spacing: 1px;
+    display: inline-block;
+    margin: 5px;
 }
 
 .tab-body .tab-col-right .btn:hover {
