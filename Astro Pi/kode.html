@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/kode.css">
+</head>
+<body>
+    
+    <div class="col-left">
+
+        <h2>Relevante kodestumper</h2>
+
+        <p>
+            Hjernen af vores kode ligger i funktionen motionDetect():
+        </p>
+    
+        <pre>
+            def motionDetect():
+                pir.wait_for_no_motion()
+                print('No motion data')
+                crisp = []
+                start = datetime.datetime.now()
+                now = datetime.datetime.now()
+                duration = datetime.timedelta(seconds = 10200) # 2 timer 50 min
+        </pre>
+
+        <p>
+            Først nulstiller vi vores sensor (for sikkerheds skyld), med 
+            <code>pir.wait_for_no_motion()</code>. 
+            Det vil sige at koden vil ikke gå videre, indtil sensoren opdager ingen bevægelse. 
+            Det bekræftes med en print i terminalen: print('No motion detected'). Derefter skaber 
+            man et liste, “crisp”, som kommer til at indeholde de beregnet hastigheder. Det er hvad 
+            funktionen motionDetect() returnere. Her er hvordan det sker: <br>
+            <strong>1.</strong> Funktionen speed() er defineret:
+        </p>
+
+        <pre>
+            def speed(t):
+                l = 7
+                return (l / t)
+        </pre>
+
+        <p>
+            Den har en defineret variable, l, sæt til 7 (læs mere i "testmåling af sensor"), 
+            tager et argument, t, og returnerer kvotienten af l divideret med t. <br>
+            <strong>2.</strong> Variablen t bliver udregnet længere ned i koden:
+        </p>
+
+        <pre>
+            t = (end_time - start_time).total_seconds()
+        </pre>
+
+        <p>
+            Den t er hvad vi sætter ind i funktionen, som dermed kan udregne hastigheden. 
+            Det er forskellen i tid mellem hvornår motion sensoren opdager bevægelse til 
+            den ikke gøre mere. <br>
+            <strong>3.</strong> Til sidst bruger vi Python's built-in funktion .append(), 
+            som tager variablen t, 
+            sætter den ind i funktionen speed(), som så udregner hastigheden. Så tager man 
+            hastigheden og omdanner det til en string, med Python's str() method.
+        </p>
+
+        <pre>
+            crisp.append(str(speed(t)))
+        </pre>
+
+        <p>
+            Her er et tilfældigt eksempel til t = 3.5 sekunder: <br>
+            speed(t) = speed(3.5) = 3.5 / 7 = 0.5 <br>
+            str(speed(3.5)) = '0.5' <br>
+            Og det bliver til: <br>
+            crisp.append(str(speed(3.5))) <br>
+            Hvis vi skulle print det i terminalen, ville det give: ['0.5'] <br>
+        </p>
+
+    </div>
+
+    <div class="col-right">
+
+        <p>
+            Så definerer vi to variabler, “start” og “now”, til at være det tidspunkt 
+            hvor ingen motion er opdaget. “start” bruges for variablen t, og ved vores 
+            while-loop, mens “now” kun for vores while-loop. Til sidst defineres en sidste
+            variable, "duration", som sættes til at være 10200 sekunder, som svarer til 2 timer 
+            og 50 minutter. <br>
+            Vi har nu udregnet hastighedernes middelværdi: <br>
+            motionDetect() returnere “crisp”, som er en liste af alle hastigheder.
+        </p>
+
+        <pre>
+            data = motionDetect()
+        </pre>
+
+        <p>
+            Vi sætter en variable, data, til at være hvad funktionen returnerer, så “data” 
+            er en liste. Så sætter vi en tilfældige variable, her x, lig med 0, som bliver 
+            til summen af alle vores data i listen. “i” er en anden tilfældige variable, som 
+            man vil bruge til at “iterate” gennem data-listen:
+        </p>
+
+        <pre>
+            x = 0
+            for i in range(len(data)):
+                x += float(data[i])
+        </pre>
+
+        <p>
+            Her er et tilfældigt eksempel: <br>
+            Hvis data = [2, 3, 4, 5], så bliver x = 2 + 3 + 4 + 5 = 14 <br>
+
+            Vi bruger float() til at specificere, at det tal den skal tage fra listen 
+            er hele kommatallet. Middelværdien beregnes med det nye x-værdi, som divideres 
+            med længden af listen, som vi får med len():
+        </p>
+
+        <pre>
+            average = str(x / len(data))
+        </pre>
+
+        <p> 
+            Til sidst bruger vi csv-biblioteket til at kunne skrive vores data ind i en csv-fil således:
+        </p>
+
+        <pre>
+            with open('data.csv', 'w') as file:
+                writer = csv.writer(file)
+                writer.writerow(data)
+                writer.writerow(average)
+        </pre>
+
+        <p>
+            Den første linje laver en ny fil som hedder “data.csv”, og skriver ind vores data, 
+            som er listen, og middelværdien “average”.
+        </p>
+        
+        <a href="./astropi.html" class="btn">
+            Tilbage
+        </a>
+
+    </div>
+
+</body>
+</html>

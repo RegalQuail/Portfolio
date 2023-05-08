@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    
+    <div class="col-left">
+
+        <h2>Sensoren</h2>
+        <p>
+            Vi testede motion-sensoren ved at opstille et scenarie der minder om dét 
+            på rumstationen, hvor store dele af udstyret befinder sig på vægge langs lange 
+            gange, som vi vurderede til at være omtrent 1,5 til 2 meter bredde. Herfra antog 
+            vi at astronauten vil passere i midten af gangen omkring 1 meter for motion-sensoren. 
+            Dette har vi taget højde ved i vores test ved at opstille sensoren på <br> en gang med 
+            lignende forhold. Ved testning af sensoren, finder vi blandt resultater. Bl.a. ses 
+            det at sensoren har forskellig rækkevidde, alt efter hvor hurtigt personen foran 
+            motion-sensoren bevæger sig. Hvis man løb vil <br> sensoren opdage en tidligere og 
+            slukke senere, end hvis man gik. Dette fører til at tiden nogenlunde jævner sig 
+            ud til at være det samme. Vi fandt dog frem til <br> at 7 meter var det mest passende 
+            til det tempo vi antog at de vil bevæge sig med på rumstationen, et sted omkring
+            gåhastighed. Dette er en klar fejlkilde og vil vægte skævt i dataen. Testningen 
+            foregår vha. terminalen og vil derfor ikke forekomme i dataen vi får tilbage fra 
+            eksperimentet. Her vil vi kun have den gennemsnitlige hastighed.
+        </p>
+
+    </div>
+
+    <div class="col-right">
+
+        <h2>Testmålinger</h2>
+        <p>
+            <u>Data</u>: <br>
+            <strong>
+                2.3527845364, 3.5246821638, 2.9835170375, 3.3627839013, 2.6719351683, 
+                2.7810471492, 3.1739164824, 2.5917562954, 3.6194717893
+            </strong>
+            <br>
+
+            Her er et eksempel på 9 målinger af hastigheden, som vi regnet os frem til vha. 
+            formlen "v = d / t", hvor d er afstanden, sæt til at være 7 meter, og t er tiden 
+            hvor sensoren er aktiv. Som det ses ligger målingerne mellem 2,35 og 3,62 m/s. Dette 
+            finder vi passende med vores egen vurdering af hastigheden, med nogen afvigelse. 
+            Bemærk også at disse test ikke er udført i samme tempo eller af samme person, men 
+            er blevet vurderet enkeltvis ift. reelle hastighed. Her fandt vi at den ved samme 
+            tempo var i stand til at give samme resultat, det eneste problem er den upålidelige 
+            rækkevidde ved forskellige hastigheder. I forbindelse med testningen af sensoren har 
+            vi også testet størrelsen af csv-filen, som bliver dannet i slutningen af programmet. 
+            Her fandt vi: <br>
+            - main.py fylder ca. 1.6 kb <br>
+            - csv-filen med 10 linjer fylder 0.12 kb <br>
+            Dette giver os masser af plads til at optage data uden at være bange for at overgå 3 mb.
+        </p>
+        
+        <a href="./astropi.html" class="btn">
+            Tilbage
+        </a>
+
+    </div>
+
+</body>
+</html>
