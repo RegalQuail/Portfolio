@@ -123,4 +123,25 @@ db.csv
 Så går man ned til `<body>` delen. `<h1>` indeholder en "data-value", som jeg bruger, for at min program kan huske hvad der står i titlen, nemlig fordi ved at svæve over den, så sker der et "special effect". Så er der et `<div>`, som har et klasse for at kunne style den i CSS, og en id for at have adgang til den i JS-filen. Til sidst har den en "onclick" funktion, som kører funktionen `question()` lig så snart man trykker på den. Funktionen sætter "start" til at være "true", som bruges senere i koden.
 ```document.getElementById('score').innerHTML = `Your score: ${score}/${data.length}`;```
 Den del kigger på elementet i HTML som har "score" som id, og sætter dens værdi til en string: "Your score" + variablen score + "/" + længden af dataen i csv-filen. Den der
-```document.getElementById('score').innerHTML``` er vigtigt i JS-filen, da det er den man bruger for at kunne få adgang til HTML-elementer, og kunne ændre på dem.
+`document.getElementById('score').innerHTML` er vigtigt i JS-filen, da det er den man bruger for at kunne få adgang til HTML-elementer, og kunne ændre på dem.
+Så er der en "for-loop", som indeholder en "if-statement". Den statement evaluerer, hvis "element" af "ID" i databasen er den samme som variablen "id", som har startværdi 0. Dvs. at ind i databasen, kigger den under primærnøglen "ID", række 0. Hvis værdien der ligger der er den samme som id-variablen, så kører den koden i loopen:
+
+```JS
+document.getElementById('question').innerHTML = element["QUESTION"];
+document.getElementById('btn1').innerHTML = element["ANSWER1"];
+document.getElementById('btn2').innerHTML = element["ANSWER2"];
+document.getElementById('btn3').innerHTML = element["ANSWER3"];
+```
+
+Først kigger den på HTML-elementet med id "question", som er `<h2>`, og giver en værdi på formen `element["PRIMÆRNØGLE"]`. Hvis `id = 0`, så kigger den ind i databasen, under primærnøglen ved rækken 0, og giver elementerne deres tilsvarende værdier. Til sidst er der en `break` så den statement ikke kører for evigt. Efter loopen, men stadig ind i den statement, så er der det samme som før, men den gang ændres på stylen af elementet.
+
+```JS
+document.getElementById('options').style.display = "inline-block";
+document.getElementById('questionBtn').style.display = "none";
+```
+
+I stedet for at ændre ind i HTML-filen, så ændrer den stylen i CSS-filen. Her bruges det for at gemme start-knappen, og vise svar-knapperne, når der trykkes på start-knappen.
+
+Derefter er der en `<h2>` med id "question", som kommer til at indeholde spørgsmålet, efter man har trykket på start-knappen.
+
+Til sidst er der en `div`-element, som indeholder tre knapper og en paragraf for scoren. Hver knappe har klassen "btn", så de kan styles på samme måde, og hver deres id, så man kan få adgang til dem i JS-filen hver for sig; det samme for scoren. Knapperne har også hver deres funktion, som kører når der trykkes på dem. Funktionerne er næsten det samme for hver. Det er en "if-statement", som evaluerer om `data[id]["ANSID"]` er lig med 1, 2 eller 3, afhængig af knappen, og om start er "true".
