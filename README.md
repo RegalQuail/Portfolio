@@ -4,8 +4,128 @@ My Portfolio, a class project
 
 ## Projekt Beskrivelse
 
-Man skal selv lave en portfolie, hvor man indrager de nye lærte skills om HTML
-og CSS.
+Man skal selv lave en portfolie, hvor man indrager de nye lærte skills om HTML, CSS og JavaScript, og forklarer om de forskellige vi har væreet igennem.
+
+### Webteknologier, making a website
+
+Files ("hjemmeside" folder):
+
+```text
+index.html
+style.css
+index.js
+```
+
+We can use the `<link>` and `<script>` tags for the CSS and JS files respectively to connect them
+to the HTML file:
+
+```html
+<link rel="stylesheet" href="style.css">
+<script src="index.js" defer></script>
+```
+
+The `defer` keyword makes the JS load after the rest of the page has loaded.
+
+We can also just write CSS and JS code inside the HTML file without the need for any additional  
+file by writing inside `<style>` and `<script>` tags respectively, all in the header of the HTML file:
+
+```html
+<head>
+    <style>Some CSS</style>
+    <script>Some JS</script>
+</head>
+```
+
+We can use the `<a>` tag to insert links:
+`<a href="http://google.com">This is a link to google.com</a>`
+
+Or an `<img>` tag to insert images:
+`<img src="myImage.png" width="100" alt="This is an image">`
+
+The unordered list tag `<ul>` creates a list with no specific order:
+
+```html
+<ul>
+    <li>This is a list item</li>
+    <li>This is a list item</li>
+    <li>This is a list item</li>
+</ul>
+```
+
+Contrary to the ordered list `<ol>`:
+
+```html
+<ol>
+    <li>This</li>
+    <li>is</li>
+    <li>an</li>
+    <li>ordered</li>
+    <li>list</li>
+</ol>
+```
+
+CSS stands for Cascading Style Sheet. It can be written inside the HTML file, or in its own file. Here, our CSS file is `style.css`. As said before, the CSS file needs to be linked to the HTML file via the `<link>` tag inside the `<head>` tag, as so:
+
+`<link rel="stylesheet" href="style.css">`
+
+To style a component:  
+
+```css
+h1 {
+    font-family: sans-serif;
+    color: red;
+    text-aligned: center;
+}
+```
+
+Tags can also have specifications/identifications, so you can style them individually:  
+
+```html
+<p id="para1"></p>
+<p id="para2"></p>
+```
+
+Global styling (every `<p>` tag):  
+
+```css
+p {
+    font-family: sans-serif;
+    text-align: center;
+}
+```
+
+Individual styling using their ID:  
+
+```css
+#para1 {
+    color: red;
+    font-size: 24px;
+}
+
+#para2 {
+    color: blue;
+    font-size: 18px;
+}
+```
+
+Just like IDs, we can use classes:  
+
+```html
+<div class="red"></div>
+<div class="blue"></div>
+```
+
+Their selector is a ".":  
+
+```css
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+```
 
 ### Mine filer
 
@@ -17,6 +137,8 @@ index.html
 index.js
 style.css
 ```
+
+(samme navn, forskellige mapper)
 
 ### HTML
 
@@ -100,12 +222,6 @@ Så for min knap på første siden, "Home", er det lidt det samme princip som an
 ### JavaScript
 
 JavaScript er hvor "the magic happens". Det er koden der gør det muligt til at flyt fra en side til den anden i min Portfolie. Det den gør er, at den checker for hvad for en `<li>`-element holder det `'active'` attribute. Så er der en funktion der lytter for en "click" på `<li>`-elementerne, altså hvornår man klikker på min navigation-bar, og så giver det `'active'` attribute til den der blev klikket på.
-
-## AstroPi Forløb
-
-### Vores Projektbeskrivelse
-
-Our idea for the Astro Pi 2022 experiment is to measure the average velocity of an astronaut in the ISS. We are curious to see how fast the astronauts and objects averagely moves from one spot to another in the station.
 
 ## Database Forløb
 
