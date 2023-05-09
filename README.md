@@ -127,18 +127,21 @@ Their selector is a ".":
 }
 ```
 
-### Mine filer
+### Min Portfolio
 
-Jeg har en HTML, CSS og JS fil, en markdown fil, plus en folder for mine billeder.
+Jeg har en hoved HTML, CSS og JS fil, en markdown fil, plus en mappe for mine billeder og hver projekt.
 
 ```text
+Astro Pi
+hjemmeside
 img
+IT Sikkerhed
+Quiz
 index.html
 index.js
 style.css
+README.md
 ```
-
-(samme navn, forskellige mapper)
 
 ### HTML
 
@@ -151,8 +154,7 @@ Så skal mine andrer filer linkes til HTML-filen:
 <script src="index.js" defer></script>
 ```
 
-`defer` betyder at JS-filen loader efter resten af siden har loadet, det er en forsikring så alt
-fungerer korrekt.  
+`defer` betyder at JS-filen loader efter resten af siden har loadet, det er en forsikring så alt fungerer korrekt.  
 
 Hel min HTML er indenfor den `<section class="tab">` element, mens det hele foregår i `<div class="tab-container">` elementet. Tænk på det som en store boks der indeholder alle elementerne.
 
@@ -164,6 +166,7 @@ Først har vi:
     <li>HTML</li>
     <li>CSS</li>
     <li>JavaScript</li>
+    <li>Projekter</li>
 </ul>
 ```
 
